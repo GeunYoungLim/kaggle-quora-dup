@@ -9,16 +9,26 @@ STOP_WORDS = stopwords.words("english")
 
 
 def preprocess(x):
-    x = str(x).lower()
-    x = x.replace(",000,000", "m").replace(",000", "k").replace("′", "'").replace("’", "'")\
-                           .replace("won't", "will not").replace("cannot", "can not").replace("can't", "can not")\
-                           .replace("n't", " not").replace("what's", "what is").replace("it's", "it is")\
-                           .replace("'ve", " have").replace("i'm", "i am").replace("'re", " are")\
-                           .replace("he's", "he is").replace("she's", "she is").replace("'s", " own")\
-                           .replace("%", " percent ").replace("₹", " rupee ").replace("$", " dollar ")\
-                           .replace("€", " euro ").replace("'ll", " will")
-    x = re.sub(r"([0-9]+)000000", r"\1m", x)
-    x = re.sub(r"([0-9]+)000", r"\1k", x)
+    #  1) 소문자 변환
+    #  2)
+    #  3)
+    #  4)
+    #  5)
+    #  6)
+    #  7)
+    #  8)
+    #  9)
+    # 10)
+    x = str(x).lower() # 1)
+    x = x.replace(",000,000", "m").replace(",000", "k").replace("′", "'").replace("’", "'")\                         # 2)
+                           .replace("won't", "will not").replace("cannot", "can not").replace("can't", "can not")\.  # 3)
+                           .replace("n't", " not").replace("what's", "what is").replace("it's", "it is")\            # 4)
+                           .replace("'ve", " have").replace("i'm", "i am").replace("'re", " are")\                   # 5)
+                           .replace("he's", "he is").replace("she's", "she is").replace("'s", " own")\               # 6)
+                           .replace("%", " percent ").replace("₹", " rupee ").replace("$", " dollar ")\              # 7)
+                           .replace("€", " euro ").replace("'ll", " will")                                           # 8)
+    x = re.sub(r"([0-9]+)000000", r"\1m", x)  #  9)
+    x = re.sub(r"([0-9]+)000", r"\1k", x)     # 10)
     return x
 
 
